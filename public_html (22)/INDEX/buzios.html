@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Turismo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+</head>
+
+<style>
+    
+
+
+</style>
+<body>
+    <div id="header"></div> <!-- Div onde o header será carregado -->
+
+    <script>
+        fetch('header.php') // Caminho para o seu arquivo header.php
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data; // Insere o conteúdo do header
+            })
+            .catch(error => console.error('Erro ao carregar o header:', error));
+    </script>
+
+    <div class="banner">
+        <div class="banner-inner">
+            <div class="banner-item active">
+                <img src="assets/img/banners/banner2.png" alt="Imagem 2" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="assets/img/banners/banner4.png" alt="Imagem 3" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="assets/img/banners/banner3.png" alt="Imagem 4" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="assets/img/banners/banner6.png" alt="Imagem 5" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="assets/img/banners/banner5.png" alt="Imagem 6" loading="lazy" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-dark">
+        <h2 class="titulo-viagens">PROXIMAS VIAGENS</h2>
+        <div class="grid viagens-grid row">
+            <div class="col-12 col-md-6 col-lg-1">
+                <a>
+                    <img src="assets/img/grade/canions.png" alt="Imagem da Grade" class="imagem-grade img-fluid"> <!-- Imagem original -->
+                </a>
+                <a href="proximas_viagens/canions.html" class="btn saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2">
+                <a>
+                    <img src="assets/img/grade/porto.png" alt="Imagem da Grade" class="imagem-grade img-fluid"> <!-- Imagem original -->
+                </a>
+                <a href="proximas_viagens/porto_seguro.html" class="btn saiba-mais">Saiba Mais</a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a>
+                    <img src="assets/img/grade/turquia.png" alt="Imagem da Grade" class="imagem-grade2 img-fluid"> <!-- Imagem original -->
+                </a>
+                <a href="proximas_viagens/turquia.html" class="btn saiba-mais2">Saiba Mais</a>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    
+
+        <div class="gallery"></div>
+        <h2 class="titulo-galeria text-center" style="margin: 20px 0; font-family: 'Arial', sans-serif; font-size: 24px; color: rgb(255, 215, 0); text-align: center;">REGISTROS DA VIAGEM</h2>
+        <h2 class="titulo-galeria text-center" style="margin: 20px 0; font-family: 'Arial', sans-serif; font-size: 24px; color:rgb(255, 215, 0); text-align: center;">BUZIOS</h2>
+
+        <div class="grid gallery-grid row" style="margin-top: 10px;">
+            <div class="col-3">
+                <a href="assets/img/galeria/buzios/1.jpg" data-fancybox="gallery" data-caption="Foto 1">
+                    <img src="assets/img/galeria/buzios/1.jpg" alt="Foto 1" class="img-fluid zoom-effect" style="width: 300px;">
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="assets/img/galeria/buzios/2.jpg" data-fancybox="gallery" data-caption="Foto 2">
+                    <img src="assets/img/galeria/buzios/2.jpg" alt="Foto 2" class="img-fluid zoom-effect" style="width: 300px;">
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="assets/img/galeria/buzios/3.jpg" data-fancybox="gallery" data-caption="Foto 3">
+                    <img src="assets/img/galeria/buzios/3.jpg" alt="Foto 3" class="img-fluid zoom-effect" style="width: 300px;">
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="assets/img/galeria/buzios/4.jpg" data-fancybox="gallery" data-caption="Foto 4">
+                    <img src="assets/img/galeria/buzios/4.jpg" alt="Foto 4" class="img-fluid zoom-effect" style="width: 300px;">
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="assets/img/galeria/buzios/5.jpg" data-fancybox="gallery" data-caption="Foto 4">
+                    <img src="assets/img/galeria/buzios/5.jpg" alt="Foto 4" class="img-fluid zoom-effect" style="width: 300px;">
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="assets/img/galeria/buzios/6.jpg" data-fancybox="gallery" data-caption="Foto 4">
+                    <img src="assets/img/galeria/buzios/6.jpg" alt="Foto 4" class="img-fluid zoom-effect" style="width: 300px;">
+                </a>
+            </div>
+            <!-- Adicione mais fotos conforme necessário -->
+        </div>
+    </div>
+
+
+    
+    <!-- Overlay para imagem em tela cheia -->
+    <div id="fullscreen-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+        <span class="close" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
+        <img id="fullscreen-image" style="max-width: 90%; max-height: 90%;">
+        <button id="prev" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%);">❮</button>
+        <button id="next" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">❯</button>
+    </div>
+
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5551982115653" target="_blank">
+            <img src="assets/img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: auto;">
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+
+        let currentBanner = 0;
+        const banners = document.querySelectorAll('.banner-item');
+
+        function showBanner(index) {
+            banners.forEach((banner, i) => {
+                banner.classList.remove('active'); // Remove a classe active
+            });
+            banners[index].classList.add('active'); // Adiciona a classe active ao banner atual
+        }
+
+        function nextBanner() {
+            currentBanner = (currentBanner + 1) % banners.length;
+            showBanner(currentBanner);
+        }
+
+        showBanner(currentBanner);
+        setInterval(nextBanner, 5000); // Troca a imagem a cada 5 segundos
+
+        window.onload = function() {
+            const airplane = document.getElementById('airplane');
+            airplane.style.animation = 'fly 5s linear forwards'; // Inicia a animação ao carregar
+            
+            // Adiciona a rolagem até a div gallery
+            const gallery = document.querySelector('.gallery');
+            if (gallery) {
+                gallery.scrollIntoView({ behavior: 'smooth' }); // Rola suavemente até a galeria
+            }
+        };
+
+        const videoLinks = document.querySelectorAll('.video-hover');
+        const videoOverlays = document.querySelectorAll('.video-overlay');
+
+        videoLinks.forEach((video, index) => {
+            const parentLink = video.parentElement; // Obtém o link pai que contém a imagem e o vídeo
+            const overlayVideo = videoOverlays[index].querySelector('video'); // Seleciona o vídeo do overlay correspondente
+            let timeout; // Variável para armazenar o timeout
+
+            parentLink.addEventListener('mouseenter', () => {
+                clearTimeout(timeout); // Limpa qualquer timeout anterior
+                const img = parentLink.querySelector('img'); // Seleciona a imagem
+                overlayVideo.src = video.src; // Define a fonte do vídeo no overlay
+                overlayVideo.style.display = 'block'; // Mostra o vídeo no overlay
+                overlayVideo.play(); // Reproduz o vídeo ao passar o mouse
+                videoOverlays[index].style.display = 'block'; // Mostra o overlay
+            });
+
+            parentLink.addEventListener('mouseleave', () => {
+                timeout = setTimeout(() => { // Define um timeout para ocultar a imagem e o overlay
+                    const img = parentLink.querySelector('img'); // Seleciona a imagem
+                    img.style.display = 'block'; // Mostra a imagem ao sair com o mouse
+                    overlayVideo.pause(); // Pausa o vídeo ao sair com o mouse
+                    overlayVideo.currentTime = 0; // Reseta o vídeo para o início
+                    videoOverlays[index].style.display = 'none'; // Oculta o overlay
+                }, 200); // Ajuste o tempo conforme necessário
+            });
+
+            videoOverlays[index].addEventListener('mouseenter', () => {
+                clearTimeout(timeout); // Limpa o timeout se o mouse estiver sobre o overlay
+            });
+
+            videoOverlays[index].addEventListener('mouseleave', () => {
+                const img = parentLink.querySelector('img'); // Seleciona a imagem
+                img.style.display = 'block'; // Mostra a imagem ao sair com o mouse
+                overlayVideo.pause(); // Pausa o vídeo ao sair com o mouse
+                overlayVideo.currentTime = 0; // Reseta o vídeo para o início
+                videoOverlays[index].style.display = 'none'; // Oculta o overlay
+            });
+        });
+
+        const images = document.querySelectorAll('.gallery img');
+        const overlay = document.getElementById('fullscreen-overlay');
+        const overlayImage = document.getElementById('fullscreen-image');
+        const closeBtn = document.querySelector('.close');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                const destination = image.getAttribute('data-destination');
+                overlayImage.src = `assets/img/galeria/${destination}.jpg`; // Ajuste o caminho conforme necessário
+                overlay.style.display = 'block';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+    </script>
+
+
+<script>
+    fetch('footer.php')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        });
+</script>
+
+</body>
+</html>
+ 

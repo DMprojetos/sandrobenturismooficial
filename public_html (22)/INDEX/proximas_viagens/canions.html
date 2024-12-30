@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Site de Turismo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Adicionando CSS do Bootstrap completo -->
+        <link rel="stylesheet" href="../styles.css"> <!-- Link para o CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Para ícones -->
+    
+    </head>
+<body>
+    <div id="header"></div> <!-- Div onde o header será carregado -->
+
+    <script>
+        fetch('header.php') // Alterado para um caminho relativo mais direto
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data; // Insere o conteúdo do header
+            })
+            .catch(error => console.error('Erro ao carregar o header:', error));
+    </script>
+
+    <div class="banner">
+        <div class="banner-inner">
+            <div class="banner-item active">
+                <img src="../assets/img/banners/banner2.png" alt="Imagem 2" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="../assets/img/banners/banner4.png" alt="Imagem 3" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="../assets/img/banners/banner3.png" alt="Imagem 4" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="../assets/img/banners/banner6.png" alt="Imagem 5" loading="lazy" class="img-fluid">
+            </div>
+            <div class="banner-item">
+                <img src="../assets/img/banners/banner5.png" alt="Imagem 6" loading="lazy" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-venda">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <video controls class="img-fluid" style="margin-left: auto; margin-right: auto; display: block; width: 300px;">
+                                <source src="../assets/img/videos/Canion.mp4" type="video/mp4"> <!-- Caminho para o vídeo -->
+                                Seu navegador não suporta o elemento de vídeo.
+                            </video>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/proximasviagens/canions/1.png" alt="Imagem 1" class="img-fluid" style="margin-left: auto; margin-right: auto; display: block;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/proximasviagens/canions/2.png" alt="Imagem 2" class="img-fluid" style="margin-left: auto; margin-right: auto; display: block;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/proximasviagens/canions/3.png" alt="Imagem 3" class="img-fluid" style="margin-left: auto; margin-right: auto; display: block;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/proximasviagens/canions/4.png" alt="Imagem 4" class="img-fluid" style="margin-left: auto; margin-right: auto; display: block;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/img/proximasviagens/canions/5.png" alt="Imagem 5" class="img-fluid" style="margin-left: auto; margin-right: auto; display: block;">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-section" style="text-align: left; margin-top: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+                    <h2 style="font-size: 24px; color: #333;">VIAGEM PARA OS CANIONS</h2>
+                    <p><strong style="font-size: 20px; color: #28a745;">Valor: R$ 550,00</strong></p>
+                    <p><strong style="font-size: 20px; color: #3c3c3c;">2x: R$ 290,00</strong></p>
+                    <p style="font-size: 16px; line-height: 1.5;">Explore a Terra dos Cânions com SandroBen Turismo! Descubra os impressionantes cânions de Itaimbezinho e Fortaleza no Parque Nacional dos Aparados da Serra. Paisagens impactantes, cachoeiras gigantescas e cenários de tirar o fôlego esperam por você. Com profundidades de até 900 metros, essa região é um verdadeiro cenário de novela. Venha conosco e viva essa experiência única!</p>
+                    <a href="https://wa.me/5551982115653?text=Olá!%20Estou%20interessado%20na%20viagem%20para%20os%20Cânions." target="_blank" class="btn btn-success" style="margin-top: 10px; padding: 10px 20px; font-size: 16px;">Finalizar via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="whatsapp-button">
+        <a href="https://wa.me/5551982115653" target="_blank">
+            <img src="../assets/img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: auto;">
+        </a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Alterando para jQuery completo -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#carouselExample').carousel({
+                interval: 5000 // Tempo em milissegundos para a troca automática
+            });
+        });
+    </script>
+
+
+
+
+
+    <style>
+        .carousel-item img {
+            left: 800px;
+            width: 300px; /* Define a largura das imagens do carrossel */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            margin-top: 230px;
+            display: flex;
+            align-items: center; /* Centraliza verticalmente os botões */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo fosco */
+            border-radius: 50%; /* Fundo redondo */
+            width: 40px; /* Largura do botão */
+            height: 40px; /* Altura do botão */
+            justify-content: center; /* Centraliza o conteúdo */
+            padding: 5px; /* Ajuste o padding para diminuir o espaçamento interior */
+            margin-left: 55px; /* Ajuste a margem para diminuir o espaçamento entre os botões */
+            margin-right: 55px; /* Ajuste a margem para diminuir o espaçamento entre os botões */
+        }
+    </style>
+
+<footer class="footer" style="background-color: #282c34; color: white; padding: 20px 0; text-align: center; margin-top: 50px;">
+    <div class="footer-content" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <div class="about-us" style="margin-bottom: 20px; flex: 1; min-width: 200px; text-align: center;">
+            <h2 style="font-size: 20px; margin-bottom: 10px; color: rgb(255, 215, 0);">QUEM SOMOS</h2>
+            <p style="font-size: 14px;">Somos uma agência de turismo dedicada a proporcionar experiências inesquecíveis. Estamos comprometidos em realizar seus sonhos.</p>
+            <div class="social-media" style="margin-top: 10px; text-align: center;">
+                <a href="https://wa.me/5554992159272" target="_blank" style="margin: 0 10px;">
+                    <i class="fab fa-whatsapp fa-2x" aria-hidden="true" style="color: #25D366;"></i>
+                </a>
+                <a href="https://www.instagram.com/sandrobenturismo/" target="_blank" style="margin: 0 10px;">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true" style="color: #E1306C;"></i>
+                </a>
+                <a href="https://www.facebook.com/sandrobenturismo" target="_blank" style="margin: 0 10px;">
+                    <i class="fab fa-facebook fa-2x" aria-hidden="true" style="color: #1877F2;"></i>
+                </a>
+            </div>
+        </div>
+        <div class="travel-packages" style="margin-bottom: 20px; flex: 1; min-width: 200px; text-align: center;">
+            <h2 style="font-size: 20px; margin-bottom: 10px; color: rgb(255, 215, 0);">NOSSAS VIAGENS</h2>
+            <p style="font-size: 16px;">Viagens Nacionais</p>
+            <p style="font-size: 16px;">Viagens Internacionais</p>
+        </div>
+        <div class="payment-methods" style="margin-bottom: 20px; flex: 1; min-width: 200px; text-align: center;">
+            <div class="payment-container" style="max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 20px; margin-bottom: 10px; color: rgb(255, 215, 0);">PAGAMENTOS</h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+                    <div style="background-color: white; padding: 5px; border-radius: 5px; margin: 5px;">
+                        <img src="../assets/img/pagamentos/visa.png" alt="Visa" class="payment-icon">
+                    </div>
+                    <div style="background-color: white; padding: 5px; border-radius: 5px; margin: 5px;">
+                        <img src="../assets/img/pagamentos/mastercard.webp" alt="MasterCard" class="payment-icon">
+                    </div>
+                    <div style="background-color: white; padding: 5px; border-radius: 5px; margin: 5px;">
+                        <img src="../assets/img/pagamentos/boleto.png" alt="Boleto" class="payment-icon">
+                    </div>
+                    <div style="background-color: white; padding: 5px; border-radius: 5px; margin: 5px;">
+                        <img src="../assets/img/pagamentos/pix.png" alt="Pix" class="payment-icon">
+                    </div>
+                    <div style="background-color: white; padding: 5px; border-radius: 5px; margin: 5px;">
+                        <img src="../assets/img/pagamentos/nubank.svg" alt="NUPay" class="payment-icon">
+                    </div>
+                </div>
+                <style>
+                    .payment-icon {
+                        width: 30px;
+                        height: 30px;
+                        margin: 5px;
+                        transition: transform 0.3s;
+                        cursor: pointer;
+                    }
+                    .payment-icon:hover {
+                        transform: scale(1.1);
+                    }
+                </style>
+                <div class="installments" style="margin-top: 10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: 14px;">&copy; 2023 Sandro Ben Turismo. Todos os direitos reservados DMProjetos.</p>
+</footer>
+</body>
+</html>
+ 

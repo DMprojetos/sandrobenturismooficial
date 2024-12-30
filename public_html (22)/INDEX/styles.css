@@ -1,0 +1,1170 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Define a fonte padrão */
+    line-height: 1.6;
+    /* Melhora o espaçamento entre linhas */
+    margin: 0;
+    padding: 0;
+    background-color: rgb(26, 26, 46);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: -150px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 0px;
+}
+
+nav ul li a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #007bff;
+    color: white;
+}
+
+.banner {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
+    height: 380px;
+    transition: transform 0.5s ease;
+}
+
+.banner:hover {
+    transform: scale(1.02);
+}
+
+.banner-inner {
+    display: block;
+}
+
+.banner-item {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner-item.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner-item:not(.active) {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+.carousel video {
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+    margin: 0px;
+}
+
+.carousel .thumbnail {
+    width: 150px;
+    height: auto;
+    margin: 0px;
+}
+
+.titulo-viagens {
+    color: rgb(255, 215, 0);
+    text-align: center;
+    font-size: 1.8em;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1;
+    transition: transform 0.5s;
+    margin: 40px;
+}
+
+.titulo-viagens.visible {
+    transform: translateY(0);
+}
+
+.viagens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+
+
+@keyframes fly {
+    0% {
+        left: -100px;
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(16px);
+    }
+
+    100% {
+        left: calc(100% + 100px);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fly-back {
+    0% {
+        left: calc(100% + 100px);
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        left: -100px;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    padding: 0;
+    margin-top: 30px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gallery.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-grid {
+    margin-top: 50px;
+}
+
+.gallery-item {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para dispositivos pequenos (ex: smartphones) */
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(26, 26, 46);
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        padding: 15px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease;
+        margin: 0 auto;
+        /* Centraliza o cabeçalho */
+    }
+
+
+
+    header .logo img {
+        max-width: 200px;
+    }
+
+    .carousel video {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner {
+        max-width: 100%;
+        height: auto;
+        /* Aumentado para melhor ajuste */
+        margin: 0 auto;
+        transition: transform 0.5s ease;
+    }
+
+    .banner:hover {
+        transform: scale(1.1);
+    }
+
+    .banner-inner {
+        display: block;
+    }
+
+    .banner-item {
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner-item.active {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner-item:not(.active) {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner img {
+        max-width: 100%;
+        /* Garante que a imagem se ajuste ao banner */
+        height: 270px;
+        /* Mantém a proporção da imagem */
+        left: 460px;
+    }
+
+    #novo-banner {
+        display: none;
+        border: 2px solid red; /* Exemplo de borda */
+        /* Adicione outros estilos específicos para o novo banner aqui */
+        background-color: rgba(255, 255, 255, 0.8); /* Exemplo de fundo */
+        padding: 10px; /* Exemplo de preenchimento */
+        transition: transform 0.3s; /* Exemplo de transição */
+    }
+    
+    #novo-banner:hover {
+        transform: scale(1.05); /* Exemplo de efeito ao passar o mouse */
+    }
+
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .gallery-grid {
+        margin-top: 50px;
+    }
+
+    .titulo-viagens {
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        /* Reduzido para melhor ajuste */
+        animation: fadeIn 1s ease-in-out;
+        opacity: 1;
+        transition: transform 0.5s;
+        margin-top: 20px;
+    }
+
+    .titulo-viagens.visible {
+        transform: translateY(0);
+    }
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 60px;
+        right: 10px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 0;
+    }
+
+    .whatsapp-button:hover {
+        width: 90px;
+        height: 90px;
+        background-color: #128C7E;
+        transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .container-dark {
+        background-color: rgb(26, 26, 46);
+        padding: 10px 30px 70px;
+        color: white;
+    }
+
+    .viagens-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .imagem-grade {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .imagem-grade2 {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+        margin-left: 20px; /* Adicionado para mover a imagem para a direita */
+    }
+    
+    .imagem-sobreposicao {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+    }
+    
+
+    
+    .imagem-grade:hover .video-hover {
+        display: block;
+    }
+
+
+
+    .titulo-viagens {
+        color: rgb(255, 215, 0);
+    }
+
+    .video-hover {
+        width: 100%;
+        height: auto;
+        display: none;
+        /* Oculta o vídeo por padrão */
+    }
+
+    .video-overlay {
+        display: none;
+        /* Oculta o overlay por padrão */
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .video-overlay-1 {
+        position: fixed;
+        left: 33%;
+        transform: translate(-22%, -99%);
+        
+    }
+    
+    .video-overlay-2 {
+        position: fixed;
+        left: 49%;
+        transform: translate(-48%, -98%);
+    }
+    
+    .video-overlay-3 {
+        position: fixed;
+        left: 66%;
+        transform: translate(-78%, -98%);
+    }
+
+    .btn.saiba-mais {
+        display: block;
+        margin-top: 25px;
+        text-align: center;
+        background-color: rgb(0, 255, 13);
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+    .btn.saiba-mais2 {
+        display: block;
+        margin-top: 25px;
+        margin-left: 20px; /* Adicionado para mover o botão para a direita */
+        text-align: center;
+        background-color: rgb(0, 255, 13);
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+
+    /* Adicione este código ao seu styles.css */
+    .zoom-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    }
+
+    .zoom-effect:hover {
+        transform: scale(1.1); /* Aumenta a escala da imagem */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao passar o mouse */
+        }
+
+    
+    
+
+}
+
+/* Ajustes para tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(26, 26, 46);
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        padding: 15px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease;
+        margin: 0 auto;
+        /* Centraliza o cabeçalho */
+    }
+
+
+
+    header .logo img {
+        max-width: 200px;
+    }
+
+    .carousel video {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner {
+        max-width: 100%;
+        height: auto;
+        /* Aumentado para melhor ajuste */
+        margin: 0 auto;
+        transition: transform 0.5s ease;
+    }
+
+    .banner:hover {
+        transform: scale(1.1);
+    }
+
+    .banner-inner {
+        display: block;
+    }
+
+    .banner-item {
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner-item.active {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner-item:not(.active) {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner img {
+        max-width: 100%;
+        /* Garante que a imagem se ajuste ao banner */
+        height: 350px;
+        /* Mantém a proporção da imagem */
+    }
+    
+    
+    #novo-banner {
+        display: none;
+        border: 2px solid red; /* Exemplo de borda */
+        /* Adicione outros estilos específicos para o novo banner aqui */
+        background-color: rgba(255, 255, 255, 0.8); /* Exemplo de fundo */
+        padding: 10px; /* Exemplo de preenchimento */
+        transition: transform 0.3s; /* Exemplo de transição */
+    }
+    
+    #novo-banner:hover {
+        transform: scale(1.05); /* Exemplo de efeito ao passar o mouse */
+    }
+
+
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .gallery-grid {
+        margin-top: 50px;
+    }
+
+    .titulo-viagens {
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+        /* Reduzido para melhor ajuste */
+        animation: fadeIn 1s ease-in-out;
+        opacity: 1;
+        transition: transform 0.5s;
+        margin-top: 20px;
+    }
+
+    .titulo-viagens.visible {
+        transform: translateY(0);
+    }
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 60px;
+        right: 10px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 0;
+    }
+
+    .whatsapp-button:hover {
+        width: 90px;
+        height: 90px;
+        background-color: #128C7E;
+        transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .container-dark {
+        background-color: rgb(26, 26, 46);
+        padding: 10px 30px 70px;
+        color: white;
+    }
+
+    .viagens-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .imagem-grade {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .imagem-sobreposicao {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+    }
+    
+    .video-hover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        z-index: 1;
+    }
+    
+    .imagem-grade:hover .video-hover {
+        display: block;
+    }
+
+    .titulo-viagens {
+        color: rgb(255, 215, 0);
+    }
+
+    .btn {
+        display: block;
+        margin-top: 25px;
+        text-align: center;
+        background-color: rgb(255, 215, 0);
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+    .video-hover {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .video-overlay {
+        display: none;
+        position: absolute;
+        top: 800px;
+        z-index: 1000;
+    }
+
+    .video-overlay-1 {
+        position: fixed;
+        left: 33%;
+        transform: translate(-54%, -56%);
+    }
+
+    .video-overlay-2 {
+        position: fixed;
+        left: 49%;
+        transform: translate(4%, -58%);
+    }
+
+    .video-overlay-3 {
+        position: fixed;
+        left: 66%;
+        transform: translate(-90%, 58%);
+    }
+
+    .btn.saiba-mais2 {
+        display: block;
+        margin-top: 25px;
+        margin-left: 20px; /* Adicionado para mover o botão para a direita */
+        text-align: center;
+        background-color: rgb(0, 255, 13);
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+    .imagem-grade2 {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+        margin-left: 20px; /* Adicionado para mover a imagem para a direita */
+    }
+
+    /* Adicione este código ao seu styles.css */
+    .zoom-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    }
+
+    .zoom-effect:hover {
+        transform: scale(1.1); /* Aumenta a escala da imagem */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao passar o mouse */
+    }
+
+}
+
+/* Ajustes para telas grandes */
+@media (min-width: 1025px) {
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(26, 26, 46);
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        padding: 15px 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease;
+        margin: 0 auto;
+        /* Centraliza o cabeçalho */
+    }
+
+
+
+    header .logo img {
+        width: 250px;
+        height: auto;
+    }
+
+    .carousel video {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner {
+        max-width: 100%;
+        height: auto;
+        /* Aumentado para melhor ajuste */
+        margin: 0 auto;
+        transition: transform 0.5s ease;
+    }
+
+    .banner:hover {
+        transform: scale(1.1);
+    }
+
+    .banner-inner {
+        display: block;
+    }
+
+    .banner-item {
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner-item.active {
+        display: block;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner-item:not(.active) {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .banner img {
+        max-width: 100%;
+        /* Garante que a imagem se ajuste ao banner */
+        height: 350px;
+        /* Mantém a proporção da imagem */
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .gallery-grid {
+        margin-top: 50px;
+    }
+
+    
+
+
+
+    .titulo-viagens {
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        /* Reduzido para melhor ajuste */
+        animation: fadeIn 1s ease-in-out;
+        opacity: 1;
+        transition: transform 0.5s;
+        margin-top: 20px;
+    }
+
+    .titulo-viagens.visible {
+        transform: translateY(0);
+    }
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 60px;
+        right: 30px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 0;
+    }
+
+    .whatsapp-button:hover {
+        width: 90px;
+        height: 90px;
+        background-color: #128C7E;
+        transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .container-dark {
+        background-color: rgb(26, 26, 46);
+        padding: 10px 30px 70px;
+        color: white;
+    }
+
+    .viagens-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .imagem-grade {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .imagem-grade2 {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    
+    
+    .imagem-sobreposicao {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 10;
+    }
+    
+    .video-hover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        z-index: 1;
+    }
+    
+    .imagem-grade:hover .video-hover {
+        display: block;
+    }
+    
+    .imagem-grade:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .imagem-grade2:hover .video-hover {
+        display: block;
+    }
+    
+    .imagem-grade2:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* styles.css */
+    .titulo-viagens {
+        color: rgb(255, 215, 0);
+    }
+
+    .btn {
+        display: block;
+        margin-top: 25px;
+        text-align: center;
+        background-color: rgb(255, 215, 0);
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+    .video-hover {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .video-overlay {
+        display: none;
+        position: absolute;
+        top: 800px;
+        z-index: 1000;
+    }
+
+    .video-overlay-1 {
+        left: 33%;
+        transform: translate(-50%, -50%);
+    }
+
+    .video-overlay-2 {
+        left: 49%;
+        transform: translate(-50%, -50%);
+    }
+
+    .video-overlay-3 {
+        left: 66%;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn.saiba-mais2 {
+        display: block;
+        margin-top: 10px;
+        margin-left: 3px; /* Adicionado para mover o botão para a direita */
+        text-align: center;
+        background-color: rgb(0, 255, 13);
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+    }
+
+    .imagem-grade2 {
+        position: relative;
+        width: auto;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        overflow: hidden;
+        margin-left: 0px; /* Adicionado para mover a imagem para a direita */
+    }
+
+    /* Adicione este código ao seu styles.css */
+.zoom-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao passar o mouse */
+}
+
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container-dark {
+    background-color: rgb(26, 26, 46);
+    padding: 10px 30px 70px;
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer h2 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.payment-methods img {
+    width: 50px;
+    /* Ajuste o tamanho conforme necessário */
+    margin: 0 10px;
+}
+
+.installments {
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 200px;
+    /* Ajuste o tamanho conforme necessário */
+}
+
+
+
+
